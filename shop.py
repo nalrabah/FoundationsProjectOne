@@ -11,8 +11,8 @@ original_price = 2
 signature_price = 2.750
 
 ############################# Start Here! ##############################
-cupcake_shop_name = #complete me!
-signature_flavors = #complete me!
+cupcake_shop_name = "Sugar Rush"
+signature_flavors = ["caramel apple","peppermint","blueberry","pumpkin spice","carrot cake"] #complete me!
 order_list = []
 
 
@@ -21,6 +21,10 @@ def print_menu():
     Print the items in the menu dictionary.
     """
     # your code goes here!
+    print "There are " + str(len(menu)) + " items on the menu:"
+    for key in menu:
+      print "- %s: %s KD " % (key, menu[key]) 
+print_menu() ## How do I put coffee and tea next to each other?
 
 
 def print_originals():
@@ -29,7 +33,9 @@ def print_originals():
     """
     print("Our original flavor cupcakes (KD %s each):" % original_price)
     # your code goes here!
-
+    for cupcakes in original_flavors:
+      print cupcakes
+print_originals()
 
 def print_signatures():
     """
@@ -37,7 +43,8 @@ def print_signatures():
     """
     print("Our signature flavor cupcake (KD %s each):" % signature_price)
     # your code goes here!
-
+    for signature in signature_flavors:
+        print signature
 
 def is_valid_order(order):
     """
