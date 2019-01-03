@@ -50,8 +50,12 @@ def is_valid_order(order):
     """
     Check if an order exists in the shop.
     """
-    # your code goes here!
-
+    if order in original_flavors or signature_flavors: 
+      return True
+    elif order = "Exit"
+      break
+    else:
+      return False
 
 def get_order():
     """
@@ -59,6 +63,12 @@ def get_order():
     """
     order_list = []
     # your code goes here!
+    order= raw_input("What would you like to order? (Enter the exact spelling of the item you would like to order. Type 'Exit' to end your order."))
+    while is_valid_order(order) = True:
+      order_list.append(order)
+    Else:
+      
+    
 
     return order_list
 
@@ -67,7 +77,7 @@ def accept_credit_card(total):
     """
     Return whether an order is eligible for credit card payment.
     """
-    # your code goes here!
+    print "Your order is eligible for credit card payment"
 
 
 def get_total_price(order_list):
